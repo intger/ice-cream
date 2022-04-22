@@ -35,8 +35,7 @@
             right: 10%;
             transform: translate(0, -35%);
         }
-        @include media-breakpoint-up(xxl) {
-            right: 10%;
+        @include full-hd {
             transform: translate(-50%, -35%);
         }
 

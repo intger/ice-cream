@@ -13,3 +13,9 @@ $lightPink: #F9B6D0;
 
 $gradient: linear-gradient(90deg, $lightBlue, $lightPurple);
 $snd_gradient: linear-gradient(90deg, $lightPink, $pink);
+
+@mixin full-hd {
+    @media screen and (min-width: 1660px) {
+        @content;
+    }
+}
