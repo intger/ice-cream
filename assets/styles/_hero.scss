@@ -43,7 +43,6 @@
                 color: $white;
                 font-size: 15px;
                 transition: 0.4s ease-in-out;
-                width: 15rem;
                 @include media-breakpoint-up(md) {
                     width: 10rem;
                 }

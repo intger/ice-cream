@@ -15,10 +15,11 @@
         display: block;
         background-color: $white;
         border-radius: 15px;
-        padding: 5px 30px;
+        padding: 5px;
         margin: 0 50px;
         @include media-breakpoint-up(md) {
             margin: 0 5px;
+            padding: 5px 30px;
         }
         @include media-breakpoint-up(lg) {
             position: absolute;
@@ -117,12 +118,15 @@
                 margin-top: 40px;
                 margin-bottom: 20px;
                 padding: 12px;
-                width: 45%;
+                width: 100%;
                 background-color: $darkBlue;
                 border: none;
                 border-radius: 20px;
                 color: $white;
                 font-size: 16px;
+                @include media-breakpoint-up(md) {
+                    width: 45%;
+                }
                 cursor:pointer;
                 &:hover {
                     background-color: rgba(74, 156, 255, 0.83);
@@ -171,6 +175,7 @@
                         padding: 2rem 0;
                         padding-bottom: 1.5rem;
                         display: flex;
+                        flex-flow: row wrap;
                         align-items: center;
                         justify-content: space-between;
                         .back-btn, .custom-submit {
@@ -179,7 +184,7 @@
                             border-radius: 20px;
                             color: $white;
                             cursor: pointer;
-                            width: 45%;
+                            width: 48%;
                         }
                         .back-btn {
                             background-color: $purple;
