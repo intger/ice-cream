@@ -15,5 +15,5 @@ npm run watch
 And there you go, that's it. 
 
 ### Extra Info
-By just cloning the theme you will still not have a working product, because you will be missing the ACF backend. Though hardcoding the text values on the theme can help with that and you'll see the same result. 
-The code here was made public just for code review purposes, but you can still quickly see how it looks on this link - https://ice-cream.codentity.net 
+By just cloning the theme you will still not have a working product, because you will be missing the ACF backend. Though hardcoding the text values on the theme can help with that and you'll see the same result. <br/>
+The code here was made public just for code review purposes, but you can still quickly see how it looks on this link - <a href="https://ice-cream.codentity.net">Demo Website</a> 
