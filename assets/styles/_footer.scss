@@ -1,0 +1,12 @@
+.footer {
+    padding: 0;
+    background-color: $purple;
+    p {
+        width: fit-content;
+        padding: 1rem 0;
+        color: $white;
+        @include media-breakpoint-up(md) {
+            margin: 0;
+        }
+    }
+}

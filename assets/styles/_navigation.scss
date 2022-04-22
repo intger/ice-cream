@@ -1,0 +1,25 @@
+.main-navigation {
+    background: $gradient;
+    padding: .5rem 0;
+    .menu-main-menu-container {
+        ul { 
+            list-style-type: none;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            @include media-breakpoint-up(md) {
+                justify-content: flex-start;
+            }
+            margin: 0;
+            padding-left: 0;
+            a {
+                text-decoration: none;
+                color: $white;
+                font-weight: 500;
+                text-shadow: 2px 2px 4px #9d9d9d;
+                padding-right: 1rem;
+                font-size: 18px;
+            }
+        }
+    }
+}

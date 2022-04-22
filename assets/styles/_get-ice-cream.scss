@@ -1,0 +1,215 @@
+.get-ice-cream {
+    background: $gradient; 
+    .form-row {
+        .form-content {
+            display: block;
+            margin: 0 3rem;
+            position: relative;
+            h2 {
+                color: $red;
+            }
+        }
+    }
+    /* Custom Form css */ 
+    .custom-form {
+        display: block;
+        background-color: $white;
+        border-radius: 15px;
+        padding: 5px 30px;
+        margin: 0 50px;
+        @include media-breakpoint-up(md) {
+            margin: 0 5px;
+        }
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            z-index: 10;
+            right: 5%;
+            transform: translate(0, -35%);
+            box-shadow: 4px 4px 10px -1px #8c8c8c;
+            overflow: hidden;
+            max-width: 28rem;
+            padding: 1rem;
+        }
+        @include media-breakpoint-up(xl) {
+            right: 10%;
+            transform: translate(0, -35%);
+        }
+        @include media-breakpoint-up(xxl) {
+            right: 10%;
+            transform: translate(-50%, -35%);
+        }
+
+        .custom-inputs {
+            width: 100%;
+            border:1px solid $white;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cf-label {
+            display: block;
+            color: #ccc;
+            margin-top: 40px;
+        }
+
+        #gp-form {
+            overflow: hidden;
+            .checkboxes-container {
+                position: relative;
+                height: 100%;
+                overflow: hidden;
+                .checkboxes-box {
+                    height: 100%;
+                    overflow: auto scroll;
+                    max-height: 90px;
+                    &::-webkit-scrollbar {
+                        width: 8px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background-color: $white;
+                        border:1px solid #ccc;
+                        border-radius:15px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-color:$blue;
+                        border-radius:15px;
+                    }
+                    p {
+                        margin: 5px 0px;
+                        .custom-checkbox {
+                            margin: 10px 0px;
+                            display: block;
+                            position: absolute;
+                            opacity: 0;
+                            left: -9999px;
+                            &:checked + label::before {
+                                background-image: url('../images/checked.png');
+                            }
+                        }
+                        label {
+                            position: relative;
+                            display: block;
+                            padding-left: 30px;
+                            cursor: pointer;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            &::before {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                background-image: url('../images/unchecked.png');
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                width: 20px;
+                                height: 20px;
+                                margin-top: 2px;
+                                margin-left: -30px;
+                            }
+                        }
+                    }
+                    .cf-label {
+                        margin-top: 0px;
+                    }
+                }
+            }
+            /* next & submit button styling */
+            .next-btn {
+                margin-top: 40px;
+                margin-bottom: 20px;
+                padding: 12px;
+                width: 45%;
+                background-color: $darkBlue;
+                border: none;
+                border-radius: 20px;
+                color: $white;
+                font-size: 16px;
+                cursor:pointer;
+                &:hover {
+                    background-color: rgba(74, 156, 255, 0.83);
+                }
+            }
+            // Error box
+            .gp-error {
+                display: none;
+                padding: 10px 15px;
+                background: #fef6f6;
+                ul {
+                    margin: 0;  
+                }
+            }
+
+            /* steps css */
+            .gp-steps {
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                max-height: 400px;
+                .gp-step {
+                    display: none;
+                    flex: 0 0 auto;
+                    transition: all 500ms ease;
+                    -moz-transition: all 500ms ease;
+                    -o-transition: all 500ms ease;
+                    -webkit-transition: all 500ms ease;
+                    padding: 0 20px;
+                    &.step-1 {
+                        display: block;
+                        float: left;
+                        width: 100%;
+                    }
+                    &.step-2 {
+                        margin-left: 100%;
+                        display: block;
+                        width: 100%;
+                    }
+                    .gp-invalid {
+                        border-bottom: 1px solid $red;
+                    }
+
+                    .buttons-wrapper {
+                        padding: 2rem 0;
+                        padding-bottom: 1.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .back-btn, .custom-submit {
+                            padding: 12px;
+                            border: none;
+                            border-radius: 20px;
+                            color: $white;
+                            cursor: pointer;
+                            width: 45%;
+                        }
+                        .back-btn {
+                            background-color: $purple;
+                            &:hover {
+                                background-color: rgb(219, 138, 239);
+                            }
+                        }
+                        .custom-submit {
+                            background-color: $darkBlue;
+                            &:hover {
+                                background-color: $blue;
+                            }
+                        }
+                    }
+                    
+                    /* steps validation */
+                    .gp-success {
+                        display: none;
+                        padding: 1rem;
+                        background: #e9fff1;
+                        p, ul {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
